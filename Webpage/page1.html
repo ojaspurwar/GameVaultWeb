@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GameVault - Free to Play</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header>
+        <a href="page1.html" class="logo">GAME<span>VAULT</span></a>
+        <nav>
+            <a href="page1.html" class="active">Home</a>
+            <a href="popular.html">Popular</a>
+            <a href="categories.html">Categories</a>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <h1>Discover Your Next<br>Obsession</h1>
+        <p>Explore the best free-to-play games available now. Download officially and safely.</p>
+    </section>
+
+    <!-- Main Content -->
+    <div class="container">
+        <div class="game-grid" data-limit="6">
+            <!-- Games will be injected here by script.js -->
+        </div>
+    </div>
+
+    <!-- Game Details Modal -->
+    <div class="modal-overlay">
+        <div class="modal">
+            <button class="close-btn">&times;</button>
+            <div class="modal-header" id="modal-image"></div>
+            <div class="modal-body">
+                <div class="modal-tags">
+                    <span class="tag highlight" id="modal-genre">Genre</span>
+                    <span class="tag" id="modal-platform">Platform</span>
+                </div>
+                <h2 id="modal-title">Game Title</h2>
+                <p id="modal-desc">Game description goes here...</p>
+                <a href="#" target="_blank" class="download-btn" id="download-btn">Download Now</a>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

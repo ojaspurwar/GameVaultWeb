@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GameVault - Categories</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header>
+        <a href="page1.html" class="logo">GAME<span>VAULT</span></a>
+        <nav>
+            <a href="page1.html">Home</a>
+            <a href="popular.html">Popular</a>
+            <a href="categories.html" class="active">Categories</a>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <h1>Browse by Genre</h1>
+        <p>Find the perfect game for your style. Filter by category below.</p>
+    </section>
+
+    <!-- Main Content -->
+    <div class="container">
+        <!-- Filter Bar -->
+        <div class="filter-container">
+            <button class="filter-btn active" data-filter="all">All Games</button>
+            <button class="filter-btn" data-filter="Shooter">Shooter</button>
+            <button class="filter-btn" data-filter="RPG">RPG</button>
+            <button class="filter-btn" data-filter="Strategy">Strategy</button>
+            <button class="filter-btn" data-filter="Battle Royale">Battle Royale</button>
+            <button class="filter-btn" data-filter="Action">Action</button>
+            <button class="filter-btn" data-filter="MOBA">MOBA</button>
+        </div>
+
+        <div class="game-grid">
+            <!-- Games will be injected here by script.js -->
+        </div>
+    </div>
+
+    <!-- Game Details Modal -->
+    <div class="modal-overlay">
+        <div class="modal">
+            <button class="close-btn">&times;</button>
+            <div class="modal-header" id="modal-image"></div>
+            <div class="modal-body">
+                <div class="modal-tags">
+                    <span class="tag highlight" id="modal-genre">Genre</span>
+                    <span class="tag" id="modal-platform">Platform</span>
+                </div>
+                <h2 id="modal-title">Game Title</h2>
+                <p id="modal-desc">Game description goes here...</p>
+                <a href="#" target="_blank" class="download-btn" id="download-btn">Download Now</a>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
