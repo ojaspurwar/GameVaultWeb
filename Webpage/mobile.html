@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GameVault - Mobile Games</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header>
+        <a href="page1.html" class="logo">GAME<span>VAULT</span></a>
+        <nav>
+            <a href="page1.html">Home</a>
+            <a href="popular.html">Popular</a>
+            <a href="categories.html">Categories</a>
+            <a href="mobile.html" class="active">Mobile</a>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <h1>Gaming on the Go</h1>
+        <p>Top free-to-play mobile games for Android and iOS.</p>
+    </section>
+
+    <!-- Main Content -->
+    <div class="container">
+        <!-- We use data-filter-default to tell script to auto-filter on load -->
+        <div class="game-grid" data-filter-default="Mobile">
+            <!-- Games will be injected here by script.js -->
+        </div>
+    </div>
+
+    <!-- Game Details Modal -->
+    <div class="modal-overlay">
+        <div class="modal">
+            <button class="close-btn">&times;</button>
+            <div class="modal-header" id="modal-image"></div>
+            <div class="modal-body">
+                <div class="modal-tags">
+                    <span class="tag highlight" id="modal-genre">Genre</span>
+                    <span class="tag" id="modal-platform">Platform</span>
+                </div>
+                <h2 id="modal-title">Game Title</h2>
+                <p id="modal-desc">Game description goes here...</p>
+                <a href="#" target="_blank" class="download-btn" id="download-btn">Download Now</a>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    <script>
+        // Inline script to enforce mobile filtering if script.js init doesn't handle it yet
+        // Wait for script.js to load
+        document.addEventListener('DOMContentLoaded', () => {
+            // Logic to filter for mobile games specifically
+            const mobileGames = games.filter(g => g.tags.includes('Mobile'));
+            renderGames(mobileGames);
+        });
+    </script>
+</body>
+
+</html>
